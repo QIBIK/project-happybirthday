@@ -2,27 +2,27 @@ body {
     display: flex;
     flex-direction: column;
     height: 2000px;
-    color: #e5d5c5;
+    color: #ffffff;
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
 .navbar {
-    background-color: #4e3a31;
+    background-color: #121520;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-brand {
-    color: #e5d5c5 !important;
+    color: #ffffff !important;
     font-weight: bold;
 }
 
 .navbar-nav .nav-item .nav-link {
-    color: #e5d5c5 !important;
+    color: #ffffff !important;
     transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    color: #a37451;
+    color: #ffffff;
 }
 
 .video-bg {
@@ -68,7 +68,7 @@ header video {
 }
 
 .btn-minimal:hover {
-    background-color: #734F33;
+    background-color: #141831;
     color: #fff;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
@@ -92,12 +92,12 @@ header video {
 
 .card-title {
     font-size: 1.25rem; 
-    color: #4e3a31; 
+    color: #31394e; 
     font-weight: 600;
 }
 
 .stats {
-    color: #e5d5c5;
+    color: #d2def3;
     line-height: 1;
     height: 100px;
 }
@@ -108,23 +108,23 @@ header video {
 }
 
 .footer {
-    background-color: #4e3a31;
+    background-color: #141522;
     padding: 20px;
-    color: #e5d5c5;
+    color: #ffffff;
     text-align: center;
-    border-top: 2px solid #3e2d29;
+    border-top: 2px solid #aaaaaa;
     font-size: 0.9rem;
-    margin-top: auto;
+    margin-top: auto;   
     width: 100%;
 }
 
 .footer a {
-    color: #a37451;
+    color: #8c909c;
     text-decoration: none;
 }
 
 .footer a:hover {
-    color: #81573e;
+    color: #dbe3fd;
     text-decoration: underline;
 }
 
@@ -218,13 +218,13 @@ header video {
     width: 90%;
     max-width: 600px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    color: #4e342e;
+    color: #2e334e;
     font-family: 'Arial', sans-serif;
 }
 .popup-content h3 {
     margin-bottom: 20px;
     font-size: 1.8rem;
-    color: #5d4037;
+    color: #373e5d;
     text-align: center;
     position: relative;
 }
@@ -232,14 +232,14 @@ header video {
     content: '';
     width: 50px;
     height: 4px;
-    background: #d7c2b2;
+    background: #b2b6d7;
     display: block;
     margin: 10px auto 0 auto;
     border-radius: 2px;
 }
 .popup-content .icon {
     font-size: 2.5rem;
-    color: #b29e91;
+    color: #9199b2;
     display: block;
     text-align: center;
     margin-bottom: 10px;
@@ -251,9 +251,9 @@ header video {
     margin-bottom: 15px;
     padding: 15px;
     border-radius: 10px;
-    border: 1px solid #d7c2b2;
-    background: #fffaf5;
-    color: #4e342e;
+    border: 1px solid #b2b6d7;
+    background: #f5f6ff;
+    color: #2e334e;
     font-size: 1rem;
     box-sizing: border-box;
     outline: none;
@@ -262,8 +262,8 @@ header video {
 .popup-content form input:focus,
 .popup-content form textarea:focus,
 .popup-content form select:focus {
-    border-color: #b29e91;
-    box-shadow: 0 0 5px rgba(178, 158, 145, 0.5);
+    background: rgb(126,126,167);
+    background: linear-gradient(90deg, rgba(126,126,167,1) 5%, rgba(0,8,121,1) 100%);
 }
 .popup-content form button {
     width: 100%;
@@ -272,14 +272,15 @@ header video {
     border: none;
     font-weight: bold;
     font-size: 1rem;
-    background: linear-gradient(135deg, #a8836f, #7b5c4b);
+    background: rgb(126,126,167);
+    background: linear-gradient(90deg, rgba(126,126,167,1) 5%, rgba(0,8,121,1) 100%);
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 .popup-content form button:hover {
-    background: linear-gradient(135deg, #b29e91, #8c7d70);
-    box-shadow: 0 4px 10px rgba(140, 125, 112, 0.4);
+    background: rgb(126,126,167);
+    background: linear-gradient(90deg, rgba(126,126,167,1) 5%, rgba(0,8,121,1) 100%);
 }
 .close-btn {
     position: absolute;
@@ -287,7 +288,7 @@ header video {
     right: 15px;
     font-size: 20px;
     cursor: pointer;
-    color: #5d4037;
+    color: #373d5d;
 }
 .form-group {
     margin-bottom: 20px;
@@ -340,7 +341,7 @@ body.no-scroll {
 .accordion-button {
     font-size: 16px;
     font-weight: bold;
-    color: #4e3a31; 
+    color: #31354e; 
     background-color: #f9f9f9; 
     border: 1px solid #ddd; 
     padding: 15px; 
@@ -350,12 +351,12 @@ body.no-scroll {
 /* При раскрытом аккордеоне убираем синий фон */
 .accordion-button:not(.collapsed) {
     background-color: #f9f9f9 !important;
-    color: #4e3a31 !important;
+    color: #31364e !important;
 }
 
 /* Наведение мышью */
 .accordion-button:hover {
-    background-color: #735b4e; 
+    background-color: #081635; 
     color: #ffffff; 
 }
 
@@ -378,7 +379,7 @@ body.no-scroll {
 .accordion-button:focus-visible {
     box-shadow: none !important;
     outline: none !important;
-    border-color: #4e3a31 !important;
+    border-color: #31354e !important;
 }
 
 
@@ -399,7 +400,7 @@ body.no-scroll {
     margin-bottom: 40px;
     font-size: 26px;
     font-weight: bold;
-    color: #4e3a31;
+    color: #31344e;
     letter-spacing: 1px;
 }
 
@@ -485,13 +486,13 @@ body.no-scroll {
     max-width: 600px;
     margin: 20px auto;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    color: #4e342e;
+    color: #2e334e;
     font-family: 'Arial', sans-serif;
 }
 .embedded-form h3 {
     margin-bottom: 20px;
     font-size: 1.8rem;
-    color: #5d4037;
+    color: #373e5d;
     text-align: center;
     position: relative;
 }
@@ -499,7 +500,7 @@ body.no-scroll {
     content: '';
     width: 50px;
     height: 4px;
-    background: #d7c2b2;
+    background: #b2b6d7;
     display: block;
     margin: 10px auto 0 auto;
     border-radius: 2px;
@@ -511,9 +512,9 @@ body.no-scroll {
     margin-bottom: 15px;
     padding: 15px;
     border-radius: 10px;
-    border: 1px solid #d7c2b2;
-    background: #fffaf5;
-    color: #4e342e;
+    border: 1px solid #b2b8d7;
+    background: #f5f6ff;
+    color: #2e314e;
     font-size: 1rem;
     box-sizing: border-box;
     outline: none;
@@ -522,8 +523,8 @@ body.no-scroll {
 .embedded-form form input:focus,
 .embedded-form form textarea:focus,
 .embedded-form form select:focus {
-    border-color: #b29e91;
-    box-shadow: 0 0 5px rgba(178, 158, 145, 0.5);
+    border-color: #9199b2;
+    box-shadow: 0 0 5px rgba(145, 148, 178, 0.5);
 }
 .embedded-form form button {
     width: 100%;
@@ -532,14 +533,15 @@ body.no-scroll {
     border: none;
     font-weight: bold;
     font-size: 1rem;
-    background: linear-gradient(135deg, #a8836f, #7b5c4b);
+    background: rgb(51,51,69);
+    background: linear-gradient(90deg, rgba(51,51,69,1) 5%, rgba(5,7,57,1) 100%);
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 .embedded-form form button:hover {
-    background: linear-gradient(135deg, #b29e91, #8c7d70);
-    box-shadow: 0 4px 10px rgba(140, 125, 112, 0.4);
+    background: rgb(59,59,84);
+    background: linear-gradient(90deg, rgba(59,59,84,1) 5%, rgba(10,14,77,1) 100%);
 }
 
 @media (min-width: 992px) {
