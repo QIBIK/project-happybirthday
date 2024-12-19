@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Home - DIGGER.ru</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img class="img-fluid me-2" src="free-icon-shovel-7316521.png" style="width: 40px; height: 40px; filter: invert(100%)" alt="Лопата">
+                DIGGER.ru
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Главная</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header with Video Background -->
+    <header>
+        <video autoplay muted loop id="background-video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+            <source src="IMG_4093.MOV" type="video/mp4">
+            Ваш браузер не поддерживает воспроизведение видео.
+        </video>
+        <div class="overlay" style="margin-top: 66px"></div>
+
+        <div style="margin-top: 100px;">
+            <div class="container d-flex flex-column align-items-center text-center text-white mt-5">
+                <div class="col" style="letter-spacing: 3px">
+                    <span style="font-size: 40px; font-weight: 635;">DIGGER.ru</span>
+                </div>
+                <div class="col d-flex mt-2">
+                    <span style="color: rgb(176, 175, 175); font-size: 17px;">
+                        Вскапывание ям опытными <br> землероями по всей России
+                    </span>
+                </div>
+                <div class="text-center" style="margin-top: 50px;">
+                    <a href="#tariffs" class="btn-minimal">Тарифы</a>
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="container" style="margin-top: 50px;">
+                <div class="row">
+                    <div class="col-6 col-md-4 mb-3">
+                        <div class="stats border-start border-5 ps-3">
+                            <span style="font-size: 35px; color: white">#1</span> <br>
+                            <span style="font-size: 12px;">Лучшие диггеры России по версии Яма.ру</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 mb-3">
+                        <div class="stats border-start border-5 ps-3">
+                            <span style="font-size: 35px; color: white">5+</span> <br>
+                            <span style="font-size: 12px;">Средний опыт землероев более 5 лет</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 mb-3">
+                        <div class="stats border-start border-5 ps-3">
+                            <span style="font-size: 35px; color: white">20</span> <br>
+                            <span style="font-size: 12px;">Лет опыта в сфере проведения земляных мероприятий</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 mb-3">
+                        <div class="stats border-start border-5 ps-3">
+                            <span style="font-size: 35px; color: white">50+</span> <br>
+                            <span style="font-size: 12px;">Видов земляных работ</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 mb-3">
+                        <div class="stats border-start border-5 ps-3">
+                            <span style="font-size: 25px; color: white">90 000+</span> <br>
+                            <span style="font-size: 12px;">Часов работ по рытью котлованов и траншей</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 mb-3">
+                        <div class="stats border-start border-5 ps-3">
+                            <span style="font-size: 35px; color: white">300+</span> <br>
+                            <span style="font-size: 12px;">Выполненных работ различной сложности</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <div class="container-fluid text-black" style="background-color:white; z-index: 2; padding-bottom:40px">
+        <div class="" style="text-align: center; font-weight: 700; font-size: 20px; padding-top:30px">
+            13 лет совершенствуем компетенции в нашей области!
+        </div>
+        <div class="mt-3 p-3 mx-auto" style="width:75%; text-align: center; font-size: 15px; background-color: rgb(235, 235, 235); border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);">
+            <span>Разрабатываем и оптимизируем процесс предоставления услуг. Улучшаем доступность. Повышаем результативность!</span>
+        </div>
+
+        <!-- Services Section -->
+        <div style="margin-top:20px">
+            <section class="services-section">
+                <div class="container">
+                    <div class="row">
+                        <!-- Service Card 1 -->
+                        <div class="col-6 col-lg-3 mb-4">
+                            <div class="service-card">
+                                <img src="free-icon-wave-1182902.png" alt="Копка траншей">
+                                <div class="service-card-body">
+                                    <p>Копка траншей под коммуникации</p>
+                                    <h4>Прокладка траншей для водопровода, канализации и кабелей с использованием современной техники и строгим соблюдением норм.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service Card 2 -->
+                        <div class="col-6 col-lg-3 mb-4">
+                            <div class="service-card">
+                                <img src="free-icon-crew-15564469.png" alt="Подготовка площадки">
+                                <div class="service-card-body">
+                                    <p>Подготовка строительной площадки</p>
+                                    <h4>Очистка и выемка земли, выравнивание участка и подготовка территории для последующих строительных работ.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service Card 3 -->
+                        <div class="col-6 col-lg-3 mb-4">
+                            <div class="service-card">
+                                <img src="free-icon-foundation-7140907.png" alt="Устройство фундамента">
+                                <div class="service-card-body">
+                                    <p>Устройство фундамента</p>
+                                    <h4>Закладка и армирование фундамента для различных типов строений с учетом особенностей грунта и конструкции.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service Card 4 -->
+                        <div class="col-6 col-lg-3 mb-4">
+                            <div class="service-card">
+                                <img src="free-icon-cenote-11199091.png" alt="Копка котлованов">
+                                <div class="service-card-body">
+                                    <p>Копка котлованов</p>
+                                    <h4>Работы по выемке грунта для строительства зданий, подземных сооружений и других объектов, с соблюдением всех норм безопасности.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service Card 5 -->
+                        <div class="col-6 col-lg-3 mb-4">
+                            <div class="service-card">
+                                <img src="free-icon-recycle-702626.png" alt="Вывоз и утилизация">
+                                <div class="service-card-body">
+                                    <p>Вывоз и утилизация грунта</p>
+                                    <h4>Вывоз излишков земли и строительного мусора с участка, с учетом экологических стандартов и законодательства.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service Card 6 -->
+                        <div class="col-6 col-lg-3 mb-4">
+                            <div class="service-card">
+                                <img src="free-icon-care-about-landscape-85841.png" alt="Ландшафтные работы">
+                                <div class="service-card-body">
+                                    <p>Ландшафтные работы</p>
+                                    <h4>Озеленение, создание декоративных элементов и благоустройство территорий для улучшения внешнего вида и функциональности участка.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service Card 7 -->
+                        <div class="col-6 col-lg-3 mb-4">
+                            <div class="service-card">
+                                <img src="free-icon-pipe-697887.png" alt="Дренажные системы">
+                                <div class="service-card-body">
+                                    <p>Устройство дренажных систем</p>
+                                    <h4>Проектирование и монтаж систем дренажа для отвода воды, предотвращение затоплений и улучшение состояния грунта.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service Card 8 -->
+                        <div class="col-6 col-lg-3 mb-4">
+                            <div class="service-card">
+                                <img src="free-icon-recovery-13063924.png" alt="Рекультивация земель">
+                                <div class="service-card-body">
+                                    <p>Рекультивация земель</p>
+                                    <h4>Восстановление нарушенных земельных участков, улучшение их экологического состояния и подготовка к дальнейшему использованию.</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Advantages Section -->
+    <section class="container-fluid text-center" style="background-image: url('photo_2024-12-01_14-04-22.jpg'); background-size: cover; background-position: center; padding-top: 40px;">
+        <div class="title-container mb-5" style="display: inline-block; background-color: white; border-radius: 10px; padding: 20px 30px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); font-weight: bold; color: #333;">
+            <h2 class="card-title">Плюсы работы с DIGGER.ru</h2>
+        </div>
+        <div class="row justify-content-center">
+            <!-- Advantage Card 1 -->
+            <div class="col-12 col-md-3 mb-4">
+                <div class="card" style="height: 100%; padding: 10px;">
+                    <h5 class="card-title font-weight-bold" style="font-size: 16px;">Постановка задачи <br>по тел./email</h5>
+                    <p class="card-text" style="font-size: 14px; margin-top: 10px;">
+                        Мы предоставляем удобный способ для постановки задач — по телефону или электронной почте. Уточните все детали работы, и наш специалист сразу же начнёт подготовку.
+                    </p>
+                </div>
+            </div>
+            <!-- Advantage Card 2 -->
+            <div class="col-12 col-md-3 mb-4">
+                <div class="card" style="height: 100%; padding: 10px;">
+                    <h5 class="card-title font-weight-bold" style="font-size: 16px;">Постоянная отчетность, прозрачность</h5>
+                    <p class="card-text" style="font-size: 14px; margin-top: 10px;">
+                        Мы обеспечиваем прозрачность на каждом этапе работы. Наши клиенты могут получать регулярные отчеты о ходе выполнения земляных работ, чтобы быть уверенными в качестве и сроках выполнения.
+                    </p>
+                </div>
+            </div>
+            <!-- Advantage Card 3 -->
+            <div class="col-12 col-md-3 mb-4">
+                <div class="card" style="height: 100%; padding: 10px;">
+                    <h5 class="card-title font-weight-bold" style="font-size: 16px;">Расширенная техническая поддержка</h5>
+                    <p class="card-text" style="font-size: 14px; margin-top: 10px;">
+                        Наши клиенты могут рассчитывать на круглосуточную техническую поддержку. Если возникнут вопросы или проблемы, наши специалисты оперативно решат любые задачи.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <!-- Advantage Card 4 -->
+            <div class="col-12 col-md-3 mb-4">
+                <div class="card" style="height: 100%; padding: 10px;">
+                    <h5 class="card-title font-weight-bold" style="font-size: 16px;">Персональный менеджер проекта</h5>
+                    <p class="card-text" style="font-size: 14px; margin-top: 10px;">
+                        Каждому проекту мы назначаем персонального менеджера, который будет сопровождать вас на всех этапах и обеспечит соблюдение сроков.
+                    </p>
+                </div>
+            </div>
+            <!-- Advantage Card 5 -->
+            <div class="col-12 col-md-3 mb-4">
+                <div class="card" style="height: 100%; padding: 10px;">
+                    <h5 class="card-title font-weight-bold" style="font-size: 16px;">Удобные способы оплаты</h5>
+                    <p class="card-text" style="font-size: 14px; margin-top: 10px;">
+                        Мы предлагаем различные способы оплаты для удобства наших клиентов, включая безналичные переводы и онлайн-платежи.
+                    </p>
+                </div>
+            </div>
+            <!-- Advantage Card 6 -->
+            <div class="col-12 col-md-3 mb-4">
+                <div class="card" style="height: 100%; padding: 10px;">
+                    <h5 class="card-title font-weight-bold" style="font-size: 16px;">Штатные специалисты</h5>
+                    <p class="card-text pb-4" style="font-size: 14px; margin-top: 10px;">
+                        Все работы выполняют наши квалифицированные штатные специалисты с опытом работы в сфере земляных работ.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <!-- Advantage Card 7 -->
+            <div class="col-12 col-md-3 mb-4">
+                <div class="card" style="height: 100%; padding: 10px;">
+                    <h5 class="card-title font-weight-bold" style="font-size: 16px;">Удобные каналы связи</h5>
+                    <p class="card-text pb-4" style="font-size: 14px; margin-top: 10px;">
+                        Мы предлагаем различные каналы связи: телефон, электронную почту и мессенджеры для вашего удобства.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tariffs Section -->
+    <section class="container-fluid text-center mt-5">
+        <div class="container">
+            <h2 id="tariffs" class="card-title" style="font-size: 30px; margin-bottom: 40px;">Наши тарифы</h2>
+            <div class="row">
+                <!-- Tariff Card 1 -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card" style="border: 1px solid #ddd; border-radius: 10px; padding: 30px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                        <h3 class="card-title font-weight-bold">Старт</h3>
+                        <p class="card-text" style="font-size: 1rem; margin-bottom: 20px;">
+                            Для малого бизнеса и стартапов. Минимальные затраты с оптимальными решениями для начала работы. Идеально подходит для старта с базовыми услугами.
+                        </p>
+                        <div style="font-size: 1.5rem; font-weight: bold; color: #4e342e; margin-bottom: 20px;">
+                            <span>от</span>
+                            <span style="font-size: 2rem; color: #d1b8a1;">20 000 ₽</span>
+                        </div>
+                        <button class="btn" style="background: linear-gradient(135deg, #d1b8a1, #b28a59); color: white; font-weight: bold; padding: 15px 30px; border-radius: 15px; border: none;">
+                            Связаться с нами
+                        </button>
+                    </div>
+                </div>
+                <!-- Tariff Card 2 -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card" style="border: 1px solid #ddd; border-radius: 10px; padding: 30px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                        <h3 class="card-title font-weight-bold">Бизнес</h3>
+                        <p class="card-text" style="font-size: 1rem; margin-bottom: 20px;">
+                            Для средних и крупных компаний. Включает дополнительные услуги, большую гибкость и более широкий спектр возможностей для растущих предприятий.
+                        </p>
+                        <div style="font-size: 1.5rem; font-weight: bold; color: #4e342e; margin-bottom: 20px;">
+                            <span>от</span>
+                            <span style="font-size: 2rem; color: #8c5a2f;">100 000 ₽</span>
+                        </div>
+                        <button class="btn" style="background: linear-gradient(135deg, #8c5a2f, #7f4a2d); color: white; font-weight: bold; padding: 15px 30px; border-radius: 15px; border: none;">
+                            Связаться с нами
+                        </button>
+                    </div>
+                </div>
+                <!-- Tariff Card 3 -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card" style="border: 1px solid #ddd; border-radius: 10px; padding: 30px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                        <h3 class="card-title font-weight-bold">Премиум</h3>
+                        <p class="card-text" style="font-size: 1rem; margin-bottom: 20px;">
+                            Для крупных компаний с высокими требованиями. Полный доступ ко всем нашим услугам, приоритетное обслуживание и индивидуальные решения для максимальной эффективности.
+                        </p>
+                        <div style="font-size: 1.5rem; font-weight: bold; color: #4e342e; margin-bottom: 20px;">
+                            <span>от</span>
+                            <span style="font-size: 2rem; color: #5d3e26;">500 000 ₽</span>
+                        </div>
+                        <button class="btn" style="background: linear-gradient(135deg, #5d3e26, #4b2e1c); color: white; font-weight: bold; padding: 15px 30px; border-radius: 15px; border: none;">
+                            Связаться с нами
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-5 mt-4">
+                <span class="text-black">
+                    Вам не подходят наши тарифы?<br>
+                    Оставьте заявку и мы предложим вам индивидуальные условия!
+                </span><br>
+                <span class="text-black pt-3" style="font-weight: 600; text-decoration: underline; cursor: pointer;" id="open-popup">
+                    Получить индивидуальный тариф
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn" id="close-popup">&times;</span>
+            <h3>Оставьте заявку</h3>
+            <form id="custom-tariff-form">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                <textarea name="comments" placeholder="Ваши комментарии" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <section class="container-fluid text-center py-5" style="background-color: #f7f7f7;">
+        <div class="title-container mb-5" style="display: inline-block; background-color: white; border-radius: 10px; padding: 20px 30px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); font-weight: bold; color: #333;">
+            <h2 class="card-title" style="font-size: 20px;">Наша команда</h2>
+        </div>
+        <div class="row justify-content-center">
+            <!-- Team Member 1 -->
+            <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="card" style="height: 100%; border: none; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
+                    <img src="aleksey.jpeg" class="card-img-top" alt="Команда 1" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 16px;">Алексей Савченко</h5>
+                        <p class="card-text" style="font-size: 13px;">
+                            Менеджер проекта. Алексей — как экскаватор с дипломом: всегда в нужном месте, в нужное время, и всегда знает, куда копать, чтобы не попасть в яму. Даже если задача сложная, он найдёт решение, как и хорошее место для котлована!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="card" style="height: 100%; border: none; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
+                    <img src="ashot.jpeg" class="card-img-top" alt="Команда 2" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 16px;">Ашот Папикян</h5>
+                        <p class="card-text" style="font-size: 13px;">
+                            Главный инженер. За каждым котлованом, который мы копаем, стоит Ашот. И ещё куча чертежей, чтобы сделать всё правильно — даже если мы не всегда понимаем, что на них написано.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="card" style="height: 100%; border: none; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
+                    <img src="artak.jpeg" class="card-img-top" alt="Команда 3" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 16px;">Артак Багдасарян</h5>
+                        <p class="card-text" style="font-size: 13px;">
+                            Координатор работ. Артак — это тот человек, который не просто координирует, но и решает, когда экскаватор начнёт копать. Он всегда на связи, но без экскаватора!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <!-- Team Member 4 -->
+            <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="card" style="height: 100%; border: none; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
+                    <img src="ilya.jpeg" class="card-img-top" alt="Команда 4" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 16px;">Элайджа Каржановский</h5>
+                        <p class="card-text" style="font-size: 13px;">
+                            Эксперт по безопасности. Если вы думаете, что безопасность на стройке — это скучно, попробуйте послушать Элайджу, когда он рассказывает, почему никогда не стоит стоять рядом с экскаватором, когда он работает.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 5 -->
+            <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="card" style="height: 100%; border: none; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
+                    <img src="photo_2024-12-03 13.47.18.jpeg" class="card-img-top" alt="Команда 5" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 16px;">Никита Рубан</h5>
+                        <p class="card-text" style="font-size: 13px;">
+                            Строитель. Когда Никита копает яму, она не просто копается — она становится идеальной для всего, что нужно. А ещё, если яму не выкопал он, то мы начинаем сомневаться в её существовании.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 6 -->
+            <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="card" style="height: 100%; border: none; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
+                    <img src="vitaliy.jpeg" class="card-img-top" alt="Команда 6" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 16px;">Виталий Балабанов</h5>
+                        <p class="card-text" style="font-size: 13px;">
+                            Специалист по проектированию. Виталий — это тот, кто разрабатывает все схемы, а затем с оптимизмом утверждает, что "мы всё успеем до обеда". И да, он всегда прав!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <!-- Team Member 7 -->
+            <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="card" style="height: 100%; border: none; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
+                    <img src="rodion.jpeg" class="card-img-top" alt="Команда 7" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 16px;">Родион Богданов</h5>
+                        <p class="card-text" style="font-size: 13px;">
+                            Инженер безопасности. Если вы когда-нибудь увидите Родиона рядом с экскаватором, знайте: он не просто стоит и смотрит, он предсказывает, как будет развиваться ситуация через 10 минут!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 8 -->
+            <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="card" style="height: 100%; border: none; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
+                    <img src="arut.jpeg" class="card-img-top" alt="Команда 8" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 16px;">Арутюн Азарян</h5>
+                        <p class="card-text" style="font-size: 13px;">
+                            Строитель. Это тот человек, который может копать и строить даже на Луне. Но, к счастью, ему хватает работы здесь, на Земле!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 9 -->
+            <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="card" style="height: 100%; border: none; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
+                    <img src="oxi3.webp" class="card-img-top" alt="Команда 9" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 16px;">Леонид Воронин</h5>
+                        <p class="card-text" style="font-size: 13px;">
+                            Вдохновитель. Леонид может читать рэп, но когда дело доходит до рытья котлованов — его стиль более глубокий, чем любой баттл. Даже наши экскаваторы считают его поэтом земли.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid text-center py-5" style="position: relative; padding-top: 0; padding-bottom: 0;">
+        <video autoplay muted loop id="background-video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+            <source src="back2.MP4" type="video/mp4">
+            Ваш браузер не поддерживает воспроизведение видео.
+        </video>
+
+        <div class="title-container mb-5" style="display: inline-block; background-color: white; border-radius: 10px; padding: 20px 30px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); font-weight: bold; color: #333;">
+            <h2 class="card-title" style="font-size: 20px;">Наши последние кейсы</h2>
+        </div>
+
+        <div class="container" style="max-width: 1200px; padding: 0;">
+            <div class="row justify-content-center">
+                <!-- Карточка 1 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card d-flex flex-column" style="border: none; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; height: 100%;">
+                        <img src="5.jpeg" class="card-img-top" alt="Кейс 1" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title" style="font-size: 16px;">Кейс 1: Разработка инфраструктуры</h5>
+                            <p class="card-text" style="font-size: 14px;">Мы реализовали проект по разработке инфраструктуры для нового жилого комплекса. Работы включали земляные и строительные операции.</p>
+                            <p class="card-date" style="font-size: 12px; color: #777;">12 октября 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 2 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card d-flex flex-column" style="border: none; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; height: 100%;">
+                        <img src="6.jpeg" class="card-img-top" alt="Кейс 2" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title" style="font-size: 16px;">Кейс 2: Земляные работы на складе</h5>
+                            <p class="card-text" style="font-size: 14px;">Провели земляные работы для строительства склада для крупной торговой сети. Объем работ был значительным, включая выемку и планировку.</p>
+                            <p class="card-date" style="font-size: 12px; color: #777;">10 октября 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <!-- Карточка 3 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card d-flex flex-column" style="border: none; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; height: 100%;">
+                        <img src="3.jpeg" class="card-img-top" alt="Кейс 3" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title" style="font-size: 16px;">Кейс 3: Ландшафтные работы для парка</h5>
+                            <p class="card-text" style="font-size: 14px;">Выполнили ландшафтные работы по благоустройству парка, включая выемку почвы, укладку дренажа и посадку деревьев.</p>
+                            <p class="card-date" style="font-size: 12px; color: #777;">5 октября 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 4 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card d-flex flex-column" style="border: none; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; height: 100%;">
+                        <img src="4.jpeg" class="card-img-top" alt="Кейс 4" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title" style="font-size: 16px;">Кейс 4: Разработка котлована для жилого комплекса</h5>
+                            <p class="card-text" style="font-size: 14px;">Выполнили работы по разработке котлована для жилого комплекса в центре города. Работы проводились в условиях ограниченного пространства.</p>
+                            <p class="card-date" style="font-size: 12px; color: #777;">28 сентября 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <!-- Карточка 5 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card d-flex flex-column" style="border: none; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; height: 100%;">
+                        <img src="1.jpeg" class="card-img-top" alt="Кейс 5" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title" style="font-size: 16px;">Кейс 5: Площадка под промышленный объект</h5>
+                            <p class="card-text" style="font-size: 14px;">Выполнили земельные работы для строительства промышленного объекта. Работа заключалась в планировке, выемке и укреплении грунтов.</p>
+                            <p class="card-date" style="font-size: 12px; color: #777;">20 сентября 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 6 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card d-flex flex-column" style="border: none; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; height: 100%;">
+                        <img src="2.jpeg" class="card-img-top" alt="Кейс 6" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title" style="font-size: 16px;">Кейс 6: Благоустройство общественной территории</h5>
+                            <p class="card-text" style="font-size: 14px;">Проект по благоустройству общественной территории с созданием зеленых зон и малых архитектурных форм.</p>
+                            <p class="card-date" style="font-size: 12px; color: #777;">15 сентября 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section class="reviews-container py-5" style="background: #f9f9f9; padding: 50px 0;">
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
+        <h2 class="text-center mb-4" style="font-size: 26px; font-weight: bold; color: #4e3a31; letter-spacing: 1px;">
+            Отзывы
+        </h2>
+
+        <!-- Первый слайд -->
+        <div class="review-slide active" style="display: block;">
+            <div class="review-inner" style="background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 20px;">
+                <div class="review-logo" style="flex-shrink: 0;">
+                    <div class="logo" style="font-size: 24px; font-weight: bold; color: #00a2e3;">
+                        СтройИнвестГрад
+                    </div>
+                </div>
+                <div class="review-content" style="font-size: 15px; line-height: 1.8; color: #333;">
+                    Наша компания заказывала у них рытьё котлована под новый жилой комплекс. Работы были выполнены чётко в срок, с соблюдением всех технических норм. Качество подготовки грунта, глубина и точность котлована полностью соответствовали проектной документации. Мы высоко оцениваем их профессионализм и оперативность.
+                    <div class="review-footer mt-3" style="font-size: 13px; color: #666; font-style: italic;">
+                        С уважением, Александр Иванов, директор по развитию ООО «СтройИнвестГрад»
+                    </div>
+                </div>
+                <div class="review-navigation" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                    <button class="nav-btn prev-btn" style="background: #f0f0f0;">&#10094;</button>
+                    <div class="slide-indicator" style="font-size: 14px; color: #333;">
+                        <span id="currentSlide">1</span> / <span id="totalSlides">3</span>
+                    </div>
+                    <button class="nav-btn next-btn" style="background: #f0f0f0;">&#10095;</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Второй слайд -->
+        <div class="review-slide" style="display: none;">
+            <div class="review-inner" style="background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 20px;">
+                <div class="review-logo" style="flex-shrink: 0;">
+                    <div class="logo" style="font-size: 24px; font-weight: bold; color: #00a2e3;">
+                        ПромТехКомплекс
+                    </div>
+                </div>
+                <div class="review-content" style="font-size: 15px; line-height: 1.8; color: #333;">
+                    Нам потребовалось подготовить траншеи для прокладки инженерных коммуникаций. Подрядчик проявил себя как высококлассный специалист: быстрая организация процесса, качественная техника, соблюдение сроков и договорённостей. Мы остались довольны сотрудничеством.
+                    <div class="review-footer mt-3" style="font-size: 13px; color: #666; font-style: italic;">
+                        С наилучшими пожеланиями, Елена Петрова, руководитель отдела закупок ЗАО «ПромТехКомплекс»
+                    </div>
+                </div>
+                <div class="review-navigation" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                    <button class="nav-btn prev-btn" style="background: #f0f0f0;">&#10094;</button>
+                    <div class="slide-indicator" style="font-size: 14px; color: #333;">
+                        <span id="currentSlide">2</span> / <span id="totalSlides">3</span>
+                    </div>
+                    <button class="nav-btn next-btn" style="background: #f0f0f0;">&#10095;</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Третий слайд -->
+        <div class="review-slide" style="display: none;">
+            <div class="review-inner" style="background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 20px;">
+                <div class="review-logo" style="flex-shrink: 0;">
+                    <div class="logo" style="font-size: 24px; font-weight: bold; color: #00a2e3;">
+                        СеверСтройКонтинент
+                    </div>
+                </div>
+                <div class="review-content" style="font-size: 15px; line-height: 1.8; color: #333;">
+                    Заказали у них рытьё большого котлована под складской терминал. Работы были выполнены безупречно – чёткая логистика, безопасность и надёжное укрепление грунта. Благодарим за отличный результат и профессиональный подход.
+                    <div class="review-footer mt-3" style="font-size: 13px; color: #666; font-style: italic;">
+                       С искренней благодарностью, Олег Смирнов, менеджер по проектам ООО «СеверСтройКонтинент»
+                    </div>
+                </div>
+                <div class="review-navigation" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                    <button class="nav-btn prev-btn" style="background: #f0f0f0;">&#10094;</button>
+                    <div class="slide-indicator" style="font-size: 14px; color: #333;">
+                        <span id="currentSlide">3</span> / <span id="totalSlides">3</span>
+                    </div>
+                    <button class="nav-btn next-btn" style="background: #f0f0f0;">&#10095;</button>
+                </div>
+            </div>
+        </div>
+
+         <!-- Четвёртый слайд -->
+        <div class="review-slide" style="display: none;">
+            <div class="review-inner" style="background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 20px;">
+                <div class="review-logo" style="flex-shrink: 0;">
+                    <div class="logo" style="font-size: 24px; font-weight: bold; color: #00a2e3;">
+                        ИнфраГеоСтрой
+                    </div>
+                </div>
+                <div class="review-content" style="font-size: 15px; line-height: 1.8; color: #333;">
+                    Нам потребовалось подготовить сложный котлован под новые цеха. Ребята справились безупречно: оптимальная логистика, тщательная работа с грунтом и высокая точность. Проект был выполнен строго по графику.
+                    <div class="review-footer mt-3" style="font-size: 13px; color: #666; font-style: italic;">
+                        С благодарностью, Максим Кузнецов, главный инженер АО «ИнфраГеоСтрой»
+                    </div>
+                </div>
+                <div class="review-navigation" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                    <button class="nav-btn prev-btn" style="background: #f0f0f0;">&#10094;</button>
+                    <div class="slide-indicator" style="font-size: 14px; color: #333;">
+                        <span id="currentSlide">1</span> / <span id="totalSlides">3</span>
+                    </div>
+                    <button class="nav-btn next-btn" style="background: #f0f0f0;">&#10095;</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Пятый слайд -->
+        <div class="review-slide" style="display: none;">
+            <div class="review-inner" style="background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 20px;">
+                <div class="review-logo" style="flex-shrink: 0;">
+                    <div class="logo" style="font-size: 24px; font-weight: bold; color: #00a2e3;">
+                        ТрансЛогПроект
+                    </div>
+                </div>
+                <div class="review-content" style="font-size: 15px; line-height: 1.8; color: #333;">
+                    Для нового логистического комплекса мы заказывали подготовку траншей под коммуникации и подъездные пути. Работа выполнена аккуратно, строго по техническому заданию и в указанные сроки. Сервис и подход на высоте.
+                    <div class="review-footer mt-3" style="font-size: 13px; color: #666; font-style: italic;">
+                        С наилучшими пожеланиями, Ольга Назарова, руководитель проекта ООО «ТрансЛогПроект»
+                    </div>
+                </div>
+                <div class="review-navigation" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                    <button class="nav-btn prev-btn" style="background: #f0f0f0;">&#10094;</button>
+                    <div class="slide-indicator" style="font-size: 14px; color: #333;">
+                        <span id="currentSlide">2</span> / <span id="totalSlides">3</span>
+                    </div>
+                    <button class="nav-btn next-btn" style="background: #f0f0f0;">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section container mt-5">
+    <h2 class="text-center mb-4 text-black">Часто задаваемые вопросы (FAQ)</h2>
+    <div class="accordion faq-container" id="faqAccordion">
+        <!-- Вопрос 1 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                    1. Какова минимальная глубина котлована, которую вы можете выкопать?
+                </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Мы можем копать котлованы глубиной от 50 см до 15 метров, в зависимости от требований вашего проекта.
+                </div>
+            </div>
+        </div>
+        <!-- Вопрос 2 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                    2. Какую технику вы используете для земельных работ?
+                </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Мы используем современную технику, включая экскаваторы, бульдозеры, траншейные машины и гидромолоты.
+                </div>
+            </div>
+        </div>
+        <!-- Вопрос 3 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                    3. Какие документы вы предоставляете после завершения работ?
+                </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Мы предоставляем акты выполненных работ, технические паспорта на грунт и рекомендации по дальнейшей эксплуатации объекта.
+                </div>
+            </div>
+        </div>
+        <!-- Вопрос 4 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                    4. Сколько времени занимает рытьё котлована под фундамент?
+                </button>
+            </h2>
+            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Среднее время зависит от размера котлована, но обычно это занимает от 1 до 5 рабочих дней.
+                </div>
+            </div>
+        </div>
+        <!-- Вопрос 5 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                    5. Вывозите ли вы грунт после окончания работ?
+                </button>
+            </h2>
+            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Да, мы занимаемся вывозом и утилизацией грунта в соответствии с экологическими нормами.
+                </div>
+            </div>
+        </div>
+        <!-- Вопрос 6 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                    6. Работаете ли вы в зимний период?
+                </button>
+            </h2>
+            <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="faq6" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Да, мы выполняем земляные работы круглый год, включая зимний период, используя специальную технику.
+                </div>
+            </div>
+        </div>
+        <!-- Вопрос 7 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq7">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                    7. Какой у вас опыт в выполнении земляных работ?
+                </button>
+            </h2>
+            <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="faq7" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Наша компания работает более 20 лет и успешно завершила более 300 проектов различной сложности.
+                </div>
+            </div>
+        </div>
+        <!-- Вопрос 8 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq8">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                    8. Предоставляете ли вы гарантию на ваши работы?
+                </button>
+            </h2>
+            <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="faq8" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Да, мы предоставляем гарантию на все виды услуг сроком до 3 лет, в зависимости от вида работ.
+                </div>
+            </div>
+        </div>
+        <!-- Вопрос 9 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq9">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                    9. Выполняете ли вы ландшафтные работы после земляных?
+                </button>
+            </h2>
+            <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="faq9" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Да, мы предлагаем полный спектр ландшафтных услуг, включая озеленение и дренажные системы.
+                </div>
+            </div>
+        </div>
+        <!-- Вопрос 10 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq10">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                    10. Каковы ваши цены на рытьё траншей?
+                </button>
+            </h2>
+            <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="faq10" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Стоимость зависит от объёма и сложности работ. Базовая цена начинается от 500 рублей за кубический метр.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section class="mt-5" style="background-color: #F9F9F9">
+        <div class="embedded-form" style="width:90%">
+            <h3>Оставьте заявку для сотрудничества</h3>
+            <form id="embedded-tariff-form">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                <textarea name="comments" placeholder="Ваши комментарии" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© DIGGER.ru, 2024. Все права защищены. <a href="#">Политика конфиденциальности</a></p>
+    </footer>
+    <script src="main.js"></script>
