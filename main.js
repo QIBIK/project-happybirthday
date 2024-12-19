@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
         form.addEventListener('submit', function (event) {
             event.preventDefault();
             const formData = new FormData(form);
-            fetch('https://formcarry.com/s/WiUn5KKmdZ9', {
+            fetch('https://formcarry.com/s/W09WNPvSjBl', {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
         form.addEventListener('submit', function (event) {
             event.preventDefault();
             const formData = new FormData(form);
-            fetch('https://formcarry.com/s/WiUn5KKmdZ9', {
+            fetch('https://formcarry.com/s/W09WNPvSjBl', {
                 method: 'POST',
                 body: formData,
                 headers: {
